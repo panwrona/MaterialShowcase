@@ -11,18 +11,22 @@
 		android:id="@+id/activity_details_toolbar"
 		android:layout_height="120dp"
 		android:layout_width="match_parent"
-		android:background="@color/primary_color"
+		android:background="@android:color/transparent"
 		app:contentInsetLeft="0dp"
 		app:contentInsetStart="0dp"
 		android:elevation="4dp">
 
-		<!--android:background="@android:color/transparent"-->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
 
 		<TextView
 			android:id="@+id/activity_details_tv_title"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textSize="24sp"
+			android:visibility="gone"
+			android:layout_centerVertical="true"
 			android:layout_marginStart="@dimen/default_padding_size"
 			/>
 
@@ -32,12 +36,16 @@
 			android:layout_width="48dp"
 			android:background="@drawable/circle"
 			android:transitionName="reveal"
-			android:layout_gravity="center"
+			android:layout_centerInParent="true"
 		/>
+
+		</RelativeLayout>
 
 	</android.support.v7.widget.Toolbar>
 
 	<android.support.v7.widget.CardView
+		android:visibility="invisible"
+		android:id="@+id/activity_details_cv_layout"
 		android:layout_margin="@dimen/default_padding_size"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">

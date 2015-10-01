@@ -25,7 +25,7 @@ public class DetailsActivity extends Activity implements DetailsView {
 	private static final String ARGS_GITHUB_REPO = "args_github_repo";
 
 	@Bind(R.id.activity_details_toolbar) Toolbar mToolbar;
-	//@Bind(R.id.activity_details_vw_circle) View mVwCircle;
+	@Bind(R.id.activity_details_vw_circle) View mVwCircle;
 	@Bind(R.id.activity_details_tv_title) TextView mTvTitle;
 	@Bind(R.id.activity_details_tv_forks) TextView mTvForks;
 	@Bind(R.id.activity_details_tv_stars) TextView mTvStars;
@@ -42,6 +42,12 @@ public class DetailsActivity extends Activity implements DetailsView {
 		Intent intent = new Intent(ctx, DetailsActivity.class);
 		intent.putExtra(ARGS_GITHUB_REPO, repo);
 		ctx.startActivity(intent);
+	}
+
+	public static Intent getIntent(Context ctx, GithubRepo repo) {
+		Intent intent = new Intent(ctx, DetailsActivity.class);
+		intent.putExtra(ARGS_GITHUB_REPO, repo);
+		return intent;
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class MainActivityRecyclerAdapter extends RecyclerView.Adapter<GithubRepo
 	public GithubRepoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 		View view = LayoutInflater.from(parent.getContext())
 			.inflate(R.layout.cardview_githubrepo, parent, false);
-		return new GithubRepoViewHolder(view, onGithubRepoViewClickListener);
+		return new GithubRepoViewHolder(view, onGithubRepoViewClickListenerMaterial);
 	}
 
 	@Override
@@ -50,4 +50,18 @@ public class MainActivityRecyclerAdapter extends RecyclerView.Adapter<GithubRepo
 	private OnGithubRepoViewClickListener onGithubRepoViewClickListener =
 		(viewHolder, repoPosition) -> DetailsActivity.startActivity(mMainActivity,
 			githubRepoList.get(repoPosition));
+
+	@SuppressWarnings("unchecked") private OnGithubRepoViewClickListener
+		onGithubRepoViewClickListenerMaterial = new OnGithubRepoViewClickListener() {
+		@Override
+		public void onItemClick(GithubRepoViewHolder viewHolder, int repoPosition) {
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+				Intent intent = DetailsActivity.getIntent(mMainActivity, githubRepoList.get(repoPosition));
+				ActivityOptionsCompat option =
+					ActivityOptionsCompat.makeSceneTransitionAnimation(mMainActivity,
+						new Pair<View, String>(viewHolder.getFab(), "reveal"));
+				ActivityCompat.startActivity(mMainActivity, intent, option.toBundle());
+			}
+		}
+	};
 }

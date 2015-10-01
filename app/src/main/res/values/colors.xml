@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="primary_color">#2196F3</color>
+	<color name="light_primary_color">#BBDEFB</color>
+	<color name="dark_primary_color">#1976D2</color>
+	<color name="text_icon_color">#FFFFFF</color>
+	<color name="accent_color">#E040FB</color>
+	<color name="primary_text">#212121</color>
+	<color name="secondary_text">#727272</color>
+	<color name="header_gradient_start_color">#19000000</color>
+	<color name="header_gradient_end_color">#8b000000</color>
+</resources>

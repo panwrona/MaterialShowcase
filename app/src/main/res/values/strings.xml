@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">MaterialShowcase</string>
+	<string name="forks">Forks:</string>
+	<string name="followers">Followers:</string>
+	<string name="watchers">Watchers:</string>
+	<string name="stars">Stars:</string>
+	<string name="toolbar_title">Material Showcase\n @\n Droids on Roids</string>
+</resources>

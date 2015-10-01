@@ -1,0 +1,21 @@
+<resources>
+
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+		<item name="android:colorPrimary">@color/primary_color</item>
+		<item name="android:colorPrimaryDark">@color/dark_primary_color</item>
+		<item name="android:colorAccent">@color/accent_color</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+
+
+	<style name="TextAppearance.LobsterBold" parent="android:TextAppearance">
+		<item name="fontPath">fonts/lobster-bold.ttf</item>
+	</style>
+
+	<style name="TextAppearance.LobsterRegular" parent="android:TextAppearance">
+		<item name="fontPath">fonts/lobster-regular.ttf</item>
+	</style>
+
+</resources>

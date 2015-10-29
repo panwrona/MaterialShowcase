@@ -6,5 +6,6 @@
 	<dimen name="default_padding_size_halved">8dp</dimen>
 	<dimen name="default_padding_size">16dp</dimen>
 	<dimen name="default_padding_size_quarter">4dp</dimen>
+	<dimen name="default_layout_margin">16dp</dimen>
 	<dimen name="large_text_size">36sp</dimen>
 </resources>

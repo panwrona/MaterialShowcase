@@ -1,6 +1,5 @@
 package com.droidsonroids.materialshowcase.screen_main;
 
-import android.util.Log;
 import com.droidsonroids.materialshowcase.data.ApiManager;
 import com.droidsonroids.materialshowcase.data.entities.GithubRepo;
 import java.util.List;

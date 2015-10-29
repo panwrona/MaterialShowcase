@@ -79,16 +79,16 @@
 					android:layout_weight="1"/>
 			</LinearLayout>
 
-			<View
-				android:id="@+id/activity_details_vw_circle"
-				android:layout_height="48dp"
-				android:layout_width="48dp"
-				android:background="@drawable/circle"
-				android:transitionName="reveal"
-				android:layout_centerInParent="true"
-				android:layout_alignParentEnd="true"
-				android:layout_marginEnd="@dimen/default_padding_size"
-				/>
+			<!--<View-->
+				<!--android:id="@+id/activity_details_vw_circle"-->
+				<!--android:layout_height="48dp"-->
+				<!--android:layout_width="48dp"-->
+				<!--android:background="@drawable/circle"-->
+				<!--android:transitionName="reveal"-->
+				<!--android:layout_centerInParent="true"-->
+				<!--android:layout_alignParentEnd="true"-->
+				<!--android:layout_marginEnd="@dimen/default_padding_size"-->
+				<!--/>-->
 
 		</RelativeLayout>
 

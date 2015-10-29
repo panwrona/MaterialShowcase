@@ -17,7 +17,7 @@ public class GithubRepoViewHolder extends RecyclerView.ViewHolder {
 	@Bind(R.id.cardview_github_tv_stars) TextView mTvStars;
 	@Bind(R.id.cardview_github_tv_watchers) TextView mTvWatchers;
 	@Bind(R.id.cardview_github_tv_forks) TextView mTvForks;
-	@Bind(R.id.activity_details_vw_circle) View mFab;
+	//@Bind(R.id.activity_details_vw_circle) View mFab;
 
 	@BindString(R.string.stars) String mStars;
 	@BindString(R.string.watchers) String mWatchers;
@@ -28,7 +28,7 @@ public class GithubRepoViewHolder extends RecyclerView.ViewHolder {
 	public GithubRepoViewHolder(View itemView, OnGithubRepoViewClickListener listener) {
 		super(itemView);
 		ButterKnife.bind(this, itemView);
-		mFab.setOnClickListener(v -> listener.onItemClick(this, currentPosition));
+		//mFab.setOnClickListener(v -> listener.onItemClick(this, currentPosition));
 	}
 
 	public void updateViews(GithubRepo githubRepo, int position) {
@@ -41,9 +41,9 @@ public class GithubRepoViewHolder extends RecyclerView.ViewHolder {
 		});
 	}
 
-	public View getFab() {
-		return mFab;
-	}
+	//public View getFab() {
+	//	return mFab;
+	//}
 
 	public TextView getTitle() {
 		return mTvHeader;

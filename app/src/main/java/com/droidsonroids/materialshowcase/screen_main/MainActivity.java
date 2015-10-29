@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Debug;
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -15,12 +16,13 @@ import com.droidsonroids.materialshowcase.data.entities.GithubRepo;
 import java.util.List;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class MainActivity extends Activity implements MainView {
+public class MainActivity extends Activity implements MainView, AppBarLayout.OnOffsetChangedListener {
 
 	private MainPresenter mainPresenter;
 	private MainActivityRecyclerAdapter adapter;
 
 	@Bind(R.id.sample_list) RecyclerView mRecyclerView;
+	@Bind(R.id.activity_main_appbar) AppBarLayout mAppBarLayout;
 
 	@Override
 	protected void attachBaseContext(Context newBase) {
@@ -51,5 +53,12 @@ public class MainActivity extends Activity implements MainView {
 	@Override
 	public void loadData(List<GithubRepo> githubRepoList) {
 		adapter.setGithubRepoList(githubRepoList);
+	}
+
+	@Override
+	public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
+		int maxScroll = mAppBarLayout.getTotalScrollRange();
+		float percentage = (float) Math.abs(i) / (float)maxScroll;
+		//TODO: C'mon Android Team, do the magic here!
 	}
 }

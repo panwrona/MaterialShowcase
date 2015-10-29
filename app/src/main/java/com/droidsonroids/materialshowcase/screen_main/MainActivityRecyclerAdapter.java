@@ -56,11 +56,11 @@ public class MainActivityRecyclerAdapter extends RecyclerView.Adapter<GithubRepo
 		@Override
 		public void onItemClick(GithubRepoViewHolder viewHolder, int repoPosition) {
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-				Intent intent = DetailsActivity.getIntent(mMainActivity, githubRepoList.get(repoPosition));
-				ActivityOptionsCompat option =
-					ActivityOptionsCompat.makeSceneTransitionAnimation(mMainActivity,
-						new Pair<View, String>(viewHolder.getFab(), "reveal"));
-				ActivityCompat.startActivity(mMainActivity, intent, option.toBundle());
+				//Intent intent = DetailsActivity.getIntent(mMainActivity, githubRepoList.get(repoPosition));
+				//ActivityOptionsCompat option =
+				//	ActivityOptionsCompat.makeSceneTransitionAnimation(mMainActivity,
+				//		new Pair<View, String>(viewHolder.getFab(), "reveal"));
+				//ActivityCompat.startActivity(mMainActivity, intent, option.toBundle());
 			}
 		}
 	};

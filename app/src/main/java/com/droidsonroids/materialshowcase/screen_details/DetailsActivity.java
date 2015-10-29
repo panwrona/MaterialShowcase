@@ -1,6 +1,5 @@
 package com.droidsonroids.materialshowcase.screen_details;
 
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -9,13 +8,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.telecom.Call;
 import android.transition.Fade;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.BindString;
